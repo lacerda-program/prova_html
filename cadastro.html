@@ -27,7 +27,8 @@
 
 
     <div class="form-container">
-        <form action="https://formsubmit.co/samuellacerda1018@gmail.com" method="POST">
+        <form id="cadastroForm" action="https://formsubmit.co/samuellacerda1018@gmail.com" method="POST">
+
             <h2>CADASTRE-SE</h2>
             <h3>DADOS PESSOAIS</h3>
             <div class="form-row">
@@ -113,6 +114,20 @@
             <input type="hidden" name="_next" value="https://lacerda-program.github.io/prova_html/obrigado.html">
 
             <button type="submit">Cadastrar</button>
+            <script>
+                document.getElementById("cadastroForm").addEventListener("submit", function (e) {
+                    e.preventDefault(); // impede o redirecionamento automático do FormSubmit
+                    const form = e.target;
+                    fetch(form.action, {
+                        method: form.method,
+                        body: new FormData(form)
+                    }).then(() => {
+                        window.location.href = "https://lacerda-program.github.io/prova_html/obrigado.html";
+                    });
+                });
+            </script>
+
+
         </form>
 
     </div>
