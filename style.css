@@ -222,3 +222,64 @@ footer {
 .social-links a:hover img {
     transform: scale(1.2);
 }
+
+/* 🌐 --- RESPONSIVIDADE --- 🌐 */
+@media (max-width: 768px) {
+    /* Ajusta o container principal */
+    .box, form {
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    /* Navegação empilhada */
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Texto centralizado e menor */
+    header h1, .hero-texto {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    /* Hero image adaptada */
+    .hero {
+        width: 90%;
+    }
+
+    .hero-img {
+        height: 200px;
+    }
+
+    /* Grid dos integrantes vira 1 coluna */
+    .integrantes {
+        grid-template-columns: 1fr;
+    }
+
+    .integrante img {
+        max-width: 120px;
+    }
+
+    /* Botão mais adaptado */
+    button {
+        padding: 12px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Celulares pequenos */
+    body {
+        font-size: 14px;
+    }
+
+    .hero-texto {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+}
