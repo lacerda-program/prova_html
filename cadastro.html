@@ -117,25 +117,21 @@
 
             <button type="submit">Cadastrar</button>
             <script>
+
                 document.getElementById("cadastroForm").addEventListener("submit", function (e) {
-                    e.preventDefault(); // impede o redirecionamento automático do FormSubmit
-                    const form = e.target;
-                    fetch(form.action, {
-                        method: form.method,
-                        body: new FormData(form)
-                    }).then(() => {
-                        window.location.href = "https://lacerda-program.github.io/prova_html/obrigado.html";
-                    });
+
+                    // Salva o nome do usuário
+                    const nome = document.getElementById("nome").value;
+                    localStorage.setItem("nomeUsuario", nome);
+
+                    // Deixa o form enviar normalmente
                 });
             </script>
-
-
         </form>
-
     </div>
-    <footer>
-        <h3>&copy; 2025 Three Days Grace Fan Page</h3>
-    </footer>
+        <footer>
+            <h3>&copy; 2025 Three Days Grace Fan Page</h3>
+        </footer>
 </body>
 
 </html>

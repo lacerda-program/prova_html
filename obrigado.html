@@ -5,16 +5,29 @@
     <title>Obrigado - Three Days Grace</title>
     <link rel="stylesheet" href="obrigado.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
 </head>
+
 <body>
     <div class="container">
-        <h1> Obrigado pela sua inscrição! </h1>
-        <p>Seu cadastro foi enviado com sucesso para a nossa equipe.</p>
-        <p>Pedimos que aguarde nossa resposta em breve pelo e-mail informado.</p>
+
+        <!-- Mensagem personalizada com nome -->
+        <h1 id="mensagem">Obrigado pelo cadastro!</h1>
+
+        <p>Seu cadastro foi enviado com sucesso para nossa equipe.</p>
+        <p>Aguarde o retorno pelo e-mail informado.</p>
 
         <a href="index.html" class="button">Voltar para o Início</a>
     </div>
+
+<script>
+    // Recupera o nome salvo no cadastro
+    const nome = localStorage.getItem("nomeUsuario");
+
+    if (nome) {
+        document.getElementById("mensagem").textContent =
+            `Obrigado, ${nome}! Seu cadastro foi enviado com sucesso.`;
+    }
+</script>
+
 </body>
 </html>
