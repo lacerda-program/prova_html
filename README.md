@@ -1,6 +1,6 @@
 # 🎶 Projeto Banda Virtual
 
-Bem-vindo ao repositório oficial do **site da Banda**!  
+Bem-vindo ao repositório oficial do **site de uma  Banda**!  
 Este projeto foi desenvolvido para apresentar a banda **Three Days Grace**, mostrar seus integrantes e permitir o cadastro de novos membros ou fãs interessados.
 
 ---
