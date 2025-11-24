@@ -60,15 +60,6 @@ main {
     box-sizing: border-box;
 }
 
-.show-list {
-    list-style: none;
-    padding: 0;
-}
-
-.show-list li {
-    padding: 10px;
-    border-bottom: 1px solid #1DB954;
-}
 
 form {
     text-align: left;
