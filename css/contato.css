@@ -1,0 +1,91 @@
+/* --- Estilo exclusivo da página contato.html --- */
+
+form {
+    text-align: left;
+    padding: 20px;
+    background: #000;
+    border: 2px solid #1DB954;
+    border-radius: 12px;
+    max-width: 800px;
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+h3{
+    color: #00cc66;
+    text-align: center;
+}
+input, textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #000;
+    border: 2px solid #1DB954;
+    color: white;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+button {
+    background: #1DB954;
+    border: none;
+    padding: 10px 20px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 12px;
+    width: 100%;
+}
+
+button:hover {
+    background: #17a34a;
+}
+
+.social-links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-links a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-links img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover img {
+    transform: scale(1.2);
+}
+
+footer {
+    text-align: center;
+    color: #00ff7f;
+    padding: 20px 0;
+    font-size: 16px;
+    margin-top: 40px;
+}
+footer h3 {
+    color: #00ff7f;
+    text-align: center;
+}
+
+/* Responsividade só do contato */
+@media (max-width: 768px) {
+    form {
+        padding: 15px;
+        max-width: 90%;
+    }
+    button {
+        padding: 12px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    input, textarea {
+        font-size: 14px;
+    }
+}

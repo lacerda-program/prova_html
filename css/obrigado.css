@@ -51,3 +51,15 @@ p {
     background-color: #00ff7f;
     color: #000;
 }
+
+footer {
+    text-align: center;
+    color: #00ff7f;
+    padding: 20px 0;
+    font-size: 16px;
+    margin-top: 40px;
+}
+footer h3 {
+    color: #00ff7f;
+    text-align: center;
+}

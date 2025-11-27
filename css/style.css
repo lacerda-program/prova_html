@@ -1,3 +1,5 @@
+/* --- ESTILO GERAL --- */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #000;
@@ -7,7 +9,7 @@ body {
 }
 
 header {
-    background-color: #000; /* alterado de #111 para #000 */
+    background-color: #000;
     color: #1DB954;
     padding: 20px 0;
     text-align: center;
@@ -39,18 +41,66 @@ main {
     padding: 20px;
 }
 
+/* --- SEÇÃO HERO (INDEX) --- */
+
 .hero {
     position: relative;
-    width: fit-content;
+    width: 80%;
+    max-width: 900px;
     margin: 40px auto;
     border: 2px solid #1DB954;
     border-radius: 12px;
     overflow: hidden;
-    background-color: #000; /* adicionado */
+    background-color: #000;
 }
 
+/* imagem ocupa toda a div */
+.hero-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    filter: brightness(40%); /* escurece a imagem para melhorar leitura */
+}
+
+/* textos sobrepostos */
+.hero-titulo,
+.hero-sub,
+.hero-legenda {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    width: 90%;
+    z-index: 2;
+}
+
+/* posicionamento */
+.hero-titulo {
+    top: 15%;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.hero-sub {
+    top: 30%;
+    font-size: 16px;
+}
+
+.hero-legenda {
+    bottom: 10%;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+
+
+/* --- BOX GENÉRICO (INDEX + SOBRE) --- */
+
 .box {
-    background: #000; /* alterado de #111 para #000 */
+    background: #000;
     padding: 40px;
     border: 2px solid #1DB954;
     max-width: 800px;
@@ -60,50 +110,7 @@ main {
     box-sizing: border-box;
 }
 
-
-form {
-    text-align: left;
-    padding: 20px;
-    background: #000; /* alterado de #111 para #000 */
-    border: 2px solid #1DB954;
-    border-radius: 12px;
-    max-width: 800px;
-    margin: 20px auto;
-    box-sizing: border-box;
-}
-
-input, textarea {
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 10px;
-    background: #000;
-    border: 2px solid #1DB954;
-    color: white;
-    border-radius: 12px;
-    box-sizing: border-box;
-}
-
-button {
-    background: #1DB954;
-    border: none;
-    padding: 10px 20px;
-    color: black;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 12px;
-    width: 100%;
-}
-
-button:hover {
-    background: #17a34a;
-}
-
-footer {
-    background: #000; /* alterado de #111 para #000 */
-    color: #1DB954;
-    text-align: center;
-    padding: 20px 0;
-}
+/* --- INTEGRANTES (SOBRE) --- */
 
 .integrantes {
     display: grid;
@@ -113,7 +120,7 @@ footer {
 }
 
 .integrante {
-    background: #000; /* alterado de #111 para #000 */
+    background: #000;
     padding: 20px;
     border: 2px solid #1DB954;
     border-radius: 12px;
@@ -130,37 +137,6 @@ footer {
 .integrante p {
     color: white;
     font-weight: bold;
-}
-
-.hero {
-    position: relative;
-    width: 60%;
-    margin: 40px auto;
-    border: 2px solid #1DB954;
-    border-radius: 12px;
-    overflow: hidden;
-    background-color: #000; /* adicionado */
-}
-
-.hero-img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-.hero-texto {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.7); /* escurecido um pouco para manter contraste */
-    padding: 20px;
-    border: 2px solid #1DB954;
-    border-radius: 12px;
-    text-align: center;
-    color: white;
-    max-width: 90%;
 }
 
 .musicas {
@@ -214,27 +190,36 @@ footer {
     transform: scale(1.2);
 }
 
-/* 🌐 --- RESPONSIVIDADE --- 🌐 */
+footer {
+    text-align: center;
+    color: #00ff7f;
+    padding: 20px 0;
+    font-size: 16px;
+    margin-top: 40px;
+}
+footer h3 {
+    color: #00ff7f;
+    text-align: center;
+}
+
+/* --- RESPONSIVIDADE --- */
+
 @media (max-width: 768px) {
-    /* Ajusta o container principal */
-    .box, form {
+    .box {
         padding: 15px;
         max-width: 90%;
     }
 
-    /* Navegação empilhada */
     nav ul {
         flex-direction: column;
         gap: 10px;
     }
 
-    /* Texto centralizado e menor */
     header h1, .hero-texto {
         font-size: 1.2rem;
         text-align: center;
     }
 
-    /* Hero image adaptada */
     .hero {
         width: 90%;
     }
@@ -243,7 +228,6 @@ footer {
         height: 200px;
     }
 
-    /* Grid dos integrantes vira 1 coluna */
     .integrantes {
         grid-template-columns: 1fr;
     }
@@ -251,16 +235,9 @@ footer {
     .integrante img {
         max-width: 120px;
     }
-
-    /* Botão mais adaptado */
-    button {
-        padding: 12px;
-        font-size: 1rem;
-    }
 }
 
 @media (max-width: 480px) {
-    /* Celulares pequenos */
     body {
         font-size: 14px;
     }
