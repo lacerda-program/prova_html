@@ -6,7 +6,7 @@ body {
   color: #fff;
 }
 
-/* QUADRADO ENVOLVENDO TODO O FORM */
+/* quadrado envolvendo todo o form */
 .form-wrapper {
   background: #111;
   border: 2px solid #00ff7f;
@@ -40,7 +40,7 @@ h2 {
   font-size: 18px;
 }
 
-/* CAMPOS (1 embaixo do outro sempre) */
+/* CAMPOS  */
 .form-group {
   display: flex;
   flex-direction: column;
