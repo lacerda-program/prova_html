@@ -60,17 +60,6 @@ button:hover {
     transform: scale(1.2);
 }
 
-footer {
-    text-align: center;
-    color: #00ff7f;
-    padding: 20px 0;
-    font-size: 16px;
-    margin-top: 40px;
-}
-footer h3 {
-    color: #00ff7f;
-    text-align: center;
-}
 
 /* Responsividade só do contato */
 @media (max-width: 768px) {
