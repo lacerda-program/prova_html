@@ -7,7 +7,7 @@ Este projeto foi desenvolvido para apresentar a banda **Three Days Grace**, most
 
 ## 🌐 Acesse o site
 
-👉 [Clique aqui para visitar o site!](https://lacerda-program.github.io/site_banda/)  
+ [site_banda](https://lacerda-program.github.io/site_banda/)  
 
 ---
 
